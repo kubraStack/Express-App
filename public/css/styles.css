@@ -1,0 +1,18 @@
+.carousel-inner {
+    width: 100%; /* Slider'ın genişliğini tam olarak kullanır */
+    height: 400px; /* Slider'ın yüksekliğini belirler */
+}
+
+.carousel-item {
+    height: 600px; /* Her bir slider iteminin yüksekliğini belirler */
+}
+
+.carousel-inner img {
+    height: 100%; /* Görselin slider yüksekliğini tam olarak doldurmasını sağlar */
+    width: 100%; /* Görselin genişliğini slider genişliğiyle eşitler */
+    object-fit: cover; /* Görüntünün tam olarak kapsamasını ve slider'a uyum sağlamasını sağlar */
+}
+
+.pt-100{
+    padding-top: 100px;
+}

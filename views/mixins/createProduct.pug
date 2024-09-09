@@ -1,0 +1,20 @@
+//- Dinamik içeriklerin olduğu ve tekrarlanan yerleri mixin ile fonksiyon oluşturur gibi yapıyoruz.
+mixin createProduct(product)
+      div.col-md-4
+            div.card.my-3
+                img(src=`/img/${product.imageUrl}` alt=`${product.description}`).card-img-top
+                div.card-body
+                    h4.card-title
+                        a( href="#") #{product.name}
+                    
+                    p.card-text.pt-2 #{product.description}
+                div
+                div.card-footer
+                    small.text-muted
+                        i.fa.fa-try #{product.price}
+                    small
+                    a(href="#").btn.btn-primary.btn-sm.float-end
+                        i.fa.fa-angle-double-right Add To Cart
+                    a
+                div
+            div

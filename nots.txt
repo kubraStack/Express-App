@@ -1,0 +1,16 @@
+Template Engine(Şablon motoru) =>  HTML dosyalarına dinamik içerik eklemeyi ve HTML sayfalarını programatik olarak oluşturmayı kolaylaştıran bir araçtır. Template engine'ler, HTML dosyalarına veri ve mantık ekleyerek sunucudan gelen dinamik içeriklerle kullanıcıya özel sayfalar oluşturmanıza olanak tanır.
+
+Popüler Template Engine'ler
+EJS (Embedded JavaScript): Basit ve öğrenmesi kolay, JavaScript ile doğrudan entegrasyon sağlar.
+Pug (eski adıyla Jade): HTML'e kıyasla daha az yazı yazarak daha temiz şablonlar oluşturmanıza olanak tanır. Indentation (girinti) odaklıdır.
+Handlebars: HTML benzeri bir sözdizimine sahip, tekrar kullanılabilir bileşenler ve partials (kısmi şablonlar) oluşturmayı destekler.
+Mustache: Mantıksız şablonlar oluşturma prensibini benimser, yani şablonlarda mantıksal işlemler yapmanıza izin vermez, sadece veri yerleştirmeyi sağlar.
+
+
+
+app.set('view engine', 'pug'); //Uygulamanın varsayılan template engine'ini Pug olarak ayarlar
+app.set('views', './views'); //Pug dosyalarının bulunacağı dosyayı belirler (varsayılan olarak ayarlanan views'dir).
+
+
+Her html sayfasının mutlaka pug uzantılı dosyası olmalıdır.
+Pug uzantılı dosyadaki html içeriklerinde etiket parantezleri olmaz(<>).Bunun yerine normal parantez kullanılır.
