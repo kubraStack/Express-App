@@ -1,23 +1,15 @@
 <!doctype html>
 html (lang="en")
 
-    include  ../includes/head.pug
+    include  ../includes/head
 
     body
 
         include ../includes/navbar.pug
-        div.container.pt-100
-            div.row
-                div.col-lg-3
-                   include ../includes/menu.pug
-                
-                div.col-lg-9
-                    block content
-                
-            div
-        div
-
-
+        .container.pt-100
+           block content  
+           
+        
+        
+        include ../includes/script
        
-    body
-html
