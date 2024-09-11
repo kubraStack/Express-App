@@ -38,6 +38,7 @@ module.exports.getProductsByCategoryId =(req,res,next) => {
         title: 'Products',
         products: products,
         categories: categories,
+        selectedCategory: categoryid,
         path:  '/products'
     });
 }
