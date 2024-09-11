@@ -1,7 +1,7 @@
 //- Dinamik içeriklerin olduğu ve tekrarlanan yerleri mixin ile fonksiyon oluşturur gibi yapıyoruz.
 mixin createProduct(product)
       div.col-md-4
-            div.card
+            div.card.mb-4
                 img(src=`/img/${product.imageUrl}` alt=`${product.description}`).card-img-top
                 div.card-body
                     h4.card-title
