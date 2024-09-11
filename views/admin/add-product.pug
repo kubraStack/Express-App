@@ -25,7 +25,8 @@ block content
         .form-group.row 
             label(for="description").col-form-label Description
             .col-sm-10
-                input.form-control#description(type="text" name="description")
+                textarea(name="description", cols="30", rows="10").form-control   
         
-            .col-sm-2
-                input(type="submit" value="Save product").btn.btn-success
+        .form-group.row 
+            .col-sm-10 
+                input(type="submit" value="Save product").btn.btn-success.mt-2
