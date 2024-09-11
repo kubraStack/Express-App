@@ -44,6 +44,7 @@ module.exports = class Product {
         products[index].price = product.price;
         products[index].imageUrl = product.imageUrl;
         products[index].description = product.description;
+        products[index].categoryid = product.id;
     }
 
     static DeleteById(id){

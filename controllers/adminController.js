@@ -67,7 +67,8 @@ exports.postEditProduct = (req,res,next)=> {
     product.price = req.body.price;
     product.imageUrl = req.body.imageUrl;
     product.description = req.body.description;
-
+    product.categoryid = req.body.categoryid;
+    
     Product.Update(product);
     res.redirect('/admin/products?action=edit');
 }
