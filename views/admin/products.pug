@@ -3,6 +3,8 @@ extends ../layouts/main-layout.pug
 
 
 block content
+    if(action !== 'undefined' && action === 'delete')
+        .alert.alert-danger The product has been deleted.
     if(action !== 'undefined' && action === 'edit')
         .alert.alert-success The product has been updated.
 
@@ -22,7 +24,11 @@ block content
                         td #{product.name}
                         td #{product.price} TL
                         td
-                            a.btn.btn-success(href=`/admin/products/${product.id}`) Edit
+                            a.btn.btn-success.m-2(href=`/admin/products/${product.id}`) Edit
+
+                            form(action='/admin/delete-product' method='POST')
+                                input(type="hidden" name="productid" value=`${product.id}`)
+                                button(type="submit").btn.btn-danger Delete
     else 
         h1 No Products                        
      
