@@ -1,7 +1,10 @@
 const products = [
-    {id: "12361",name: 'iPhone 11', price: 35000, imageUrl: 'phone1.jpg', description: 'New Product'},
-    {id: "12362",name: 'iPhone 12', price: 45000, imageUrl: 'phone2.jpg', description: 'New Product'},
-    {id: "12363",name: 'iPhone 14', price: 70000, imageUrl: 'phone3.jpg', description: 'New Product'},
+    {id: "12361",name: 'iPhone 11', price: 35000, imageUrl: 'phone1.jpg', description: 'New Product', categoryid: "1"},
+    {id: "12362",name: 'iPhone 12', price: 45000, imageUrl: 'phone2.jpg', description: 'New Product',categoryid: "1"},
+    {id: "12363",name: 'iPhone 14', price: 70000, imageUrl: 'phone3.jpg', description: 'New Product',  categoryid: "1"},
+    {id: "12364",name: 'Macbook', price: 26000, imageUrl: 'macbook.jpg', description: 'Macbook New Notebook',  categoryid: "2"},
+    {id: "12365",name: 'Kurutma Makinesi', price: 18549, imageUrl: 'kurutma.jpg', description: 'Çamaşır Kurutma Makinesi',  categoryid: "3"},
+
 ];
 
 
@@ -26,10 +29,13 @@ module.exports = class Product {
 
     //Details
     static getById(id){
-        const product = products.find(i => i.id === id);
-        return product;
+        return  products.find(i => i.id === id);
+        
     }
-
+    static getProductsByCategoryId(categoryid){
+        return products.filter(i=> i.categoryid === categoryid);
+    }
+    
     static Update(product){
         const index = products.findIndex(i => i.id === product.id);
         products[index].name = product.name;
