@@ -20,6 +20,13 @@ block content
             label(for="imageUrl").col-form-label Image
             .col-sm-12
                 input.form-control#image(type="text" name="imageUrl")
+        .form-group.row 
+            label(for="categoryid").col-form-label Category
+            .col-sm-12
+                select.form-control#categoryid(name="categoryid")
+                    option(value="-1") Select Category
+                    each category in categories 
+                        option(value=`${category.id}`) #{category.name} 
         
             
         .form-group.row 
